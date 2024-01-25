@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="paralax">
+        <img src="./assets/bg.jpg" id="bg">
+        <img src="./assets/moon.png" id="moon">
+        <img src="./assets/mountain.png" id="mountain">
+        <img src="./assets/road.png" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+
+    <section class="content">
+        <h2 class="content__title">Paralax Effect</h2>
+        <p class="parag">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus vitae officia commodi ipsam, doloribus voluptates et recusandae earum sequi blanditiis delectus magnam maiores soluta unde ullam ipsa aliquid beatae rerum sapiente. Dolorem saepe inventore aliquid nostrum odio soluta quod, debitis magnam? Consequatur, totam rerum dolores, sint sed fuga dicta aliquid illum sunt itaque voluptatem quae. Odit praesentium iusto accusantium cumque ab esse natus omnis earum placeat quia laboriosam, assumenda, corrupti nihil nulla temporibus eum optio ut quas eaque molestiae quod reprehenderit quo? Eligendi, veniam distinctio, atque quod corrupti sit odio amet sapiente architecto natus modi blanditiis, dolores sed velit a! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae pariatur odit consequuntur reiciendis doloribus laboriosam vel iure ratione, placeat voluptate quos suscipit, blanditiis cupiditate fugit deserunt vero obcaecati illum voluptatibus nisi a ex maiores repudiandae nesciunt provident? Ad quisquam at ullam sequi aspernatur labore et odit voluptas ex perspiciatis enim debitis non est incidunt dignissimos voluptatem, vero, quidem quis perferendis optio dolores nam. Sed, explicabo animi porro debitis maxime pariatur delectus nostrum. Nostrum quidem culpa alias voluptate officiis, voluptatem maiores delectus nemo at ea inventore, blanditiis possimus debitis in consectetur beatae, excepturi dolorum impedit? Enim maxime veritatis doloremque beatae, ducimus possimus nulla vero minima placeat amet vitae quas sunt consequatur aut molestiae asperiores maiores itaque eaque, non perspiciatis fuga minus alias distinctio! Nihil non, sunt vitae necessitatibus quis, quae modi autem veniam nesciunt perspiciatis voluptate inventore illo sed dolore? Aliquam commodi maxime, ducimus laudantium deserunt architecto nesciunt autem reprehenderit recusandae voluptates necessitatibus non laboriosam cupiditate sed corrupti qui consectetur. Tempora quaerat minus sed! Eaque possimus voluptatum nihil incidunt voluptates cum, a magnam ipsam hic dolor id? Neque tenetur nam suscipit totam sed debitis eos? Provident harum culpa velit, facere porro voluptatem vero expedita quae magni alias vitae numquam nesciunt distinctio quo, corporis temporibus autem. Ullam, ipsa in atque quo quas, nisi inventore provident magnam similique, vitae magni voluptates ducimus corporis sapiente laboriosam quod? Ipsum vero adipisci vel reiciendis quam at aut minus inventore similique, voluptates animi tempore amet eum hic autem id provident! Quisquam, a illum sapiente iure maxime corporis laborum asperiores earum praesentium cupiditate reiciendis voluptates autem quaerat possimus maiores libero. Maiores tenetur accusantium aspernatur, fugiat dolorem perspiciatis unde cupiditate voluptatibus, rem temporibus ut excepturi incidunt amet dolor suscipit tempora illo nostrum illum. Labore sapiente reiciendis, ipsum asperiores mollitia quasi nulla animi ut aspernatur cum voluptatem veritatis molestiae ex. Velit labore voluptatibus omnis quas accusamus laborum aperiam dolorem eaque. Possimus distinctio ipsa non reprehenderit quibusdam qui sint, veritatis ratione ipsam dolorum provident dolorem, nostrum quia voluptatibus doloribus enim repudiandae dolores corrupti, amet quaerat incidunt. Iste illo laboriosam rerum impedit recusandae. Inventore impedit corporis dolor eligendi dolorum rerum voluptatibus cumque sint, natus assumenda quibusdam minima incidunt repudiandae tempora laboriosam nihil modi fugit odio explicabo accusamus nam minus numquam ipsum neque? Laboriosam tempora assumenda animi aliquid odit accusamus inventore dolorem praesentium, tempore itaque voluptatibus culpa deserunt consequuntur delectus! Accusantium reiciendis aliquam nulla cum. Explicabo, sint. Tempore, animi! Neque pariatur commodi cupiditate, hic voluptate doloribus, sit placeat fugiat molestias quia suscipit laudantium optio quis, libero ullam saepe amet quam aliquid. Voluptate ducimus sit esse provident! Soluta, dolore eius impedit aliquid voluptate culpa. Iure, molestias! Doloribus sit, delectus eius asperiores necessitatibus consequuntur explicabo consectetur inventore placeat ad ipsum eaque, perspiciatis veritatis vero! Voluptas porro aperiam amet voluptatibus placeat, earum quis eius veniam provident, iusto autem, doloribus maiores temporibus excepturi itaque sit quibusdam perspiciatis repudiandae vitae? Amet cum, voluptate unde inventore animi aliquid fugit, beatae vel quo sequi placeat labore commodi fugiat est mollitia eligendi repellendus dicta aspernatur esse laudantium ipsum ea, nobis sed.</p>
+    </section>
+
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+
+        let content__title = document.querySelector('.content__title');
+        let parag = document.querySelector('.parag');
+
+        window.addEventListener('scroll', () => {
+            let value = window.scrollY;
+
+            bg.style.top = value * 0.5 + "px";
+            moon.style.left = value * 0.5 + "px";
+            mountain.style.top = value * 0.15 + "px";
+            road.style.top = value * 0.15 + "px";
+            text.style.top = value * 1 + "px";
+
+            if (value > 500) {
+                content__title.style.opacity = '1';
+                parag.style.opacity = '1';
+            }else {
+                content__title.style.opacity = '0';
+                parag.style.opacity = '0';
+            }
+        })
+    </script>
+</body>
+</html>

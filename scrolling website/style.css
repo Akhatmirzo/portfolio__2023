@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0a2043;
+    min-height: 1500px;
+}
+
+.paralax {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paralax::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2043, transparent);
+    z-index: 10000;
+}
+
+.paralax::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #0a2043;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+
+.paralax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#text {
+    position: relative;
+    color: white;
+    font-size: 10em;
+    z-index: 1;
+}
+
+#road {
+    z-index: 2;
+}
+
+/* !------------- */
+
+.content {
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.content h2 {
+    font-size: 37px;
+    color: white;
+    letter-spacing: 0.1vw;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.parag {
+    top: 100px;
+    text-align: justify;
+    font-size: 22px;
+    line-height: 40px;
+    color: azure;
+    /* opacity: 0.8; */
+    opacity: 0;
+    transition: all 0.3s 0.3s ease;
+}
+
