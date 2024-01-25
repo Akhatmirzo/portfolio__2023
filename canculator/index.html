@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator || Akhatmirzo Umarov</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="web icon" href="./assets/Connect.svg">
+</head>
+
+<body>
+    <main>
+        <section class="container">
+            <div class="calc__wrapper">
+                <div class="phone__top-control">
+                    <h2 class="time">
+                        <span class="time-hour">00</span>
+                        :
+                        <span class="time-minute">00</span>
+                    </h2>
+
+                    <div class="info">
+                        <img src="./assets/Connect.svg" alt="Connect">
+                        <img src="./assets/Internet.svg" alt="Internet">
+                        <img src="./assets/Charge.svg" alt="Charge">
+                    </div>
+                </div>
+
+                <div class="calc__display">
+                    <input type="text" value="0" id="displayValue" onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+                    <h3 class="result">0</h3>
+                </div>
+
+                <div class="calc__control">
+                    <div class="calc__number-btn">
+                        <button onkeypress="return false" class="number" value="1">1</button>
+                        <button onkeypress="return false" class="number" value="2">2</button>
+                        <button onkeypress="return false" class="number" value="3">3</button>
+                        <button onkeypress="return false" class="number" value="4">4</button>
+                        <button onkeypress="return false" class="number" value="5">5</button>
+                        <button onkeypress="return false" class="number" value="6">6</button>
+                        <button onkeypress="return false" class="number" value="7">7</button>
+                        <button onkeypress="return false" class="number" value="8">8</button>
+                        <button onkeypress="return false" class="number" value="9">9</button>
+                        <button onkeypress="return false" class="number" value="0">0</button>
+                        <button onkeypress="return false" class="clear-btn el-marker" onclick="clearDisplay()">C</button>
+                        <button class="answer-btn el-marker" onclick="answer()">=</button>
+                    </div>
+    
+                    <div class="calc__operation-btn">
+                        <button class="operation" value="+">+</button>
+                        <button class="operation" value="-">-</button>
+                        <button class="operation" value="*">×</button>
+                        <button class="operation" value="/">÷</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

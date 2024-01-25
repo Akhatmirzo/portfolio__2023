@@ -1,0 +1,169 @@
+.events__calendar {
+    padding-block: 200px;
+
+    @include tablet() {
+        padding-block: 120px;
+    }
+
+    @include mobile() {
+        padding-block: 80px;
+    }
+
+    h2 {
+        color: $orange;
+        font-size: 64px;
+        font-weight: 400;
+        margin-bottom: 80px;
+
+        @include media(0px, 1440px) {
+            font-size: 56px;
+        }
+
+        @include tablet() {
+            font-size: 42px;
+        }
+
+        @include mobile() {
+            font-size: 32px;
+        }
+
+        @include media(0px, 475px) {
+            font-size: 24px;
+        }
+
+        span {
+            font-family: 'Apoc Normal';
+            font-style: italic;
+        }
+    }
+
+    &__form-content {
+
+        h3 {
+            color: $white;
+            font-size: 24px;
+            font-weight: 400;
+
+            @include tablet() {
+                font-size: 20px;
+            }
+
+            @include mobile() {
+                font-size: 16px;
+            }
+        }
+
+        form {
+            display: flex;
+            gap: 60px;
+
+            @include tablet() {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 48px;
+            }
+
+            @include mobile() {
+                gap: 28px;
+                flex-direction: column;
+            }
+
+            .formLabel {
+                width: 25%;
+
+                @include media(0px, 1024px) {
+                    width: 100%;
+                }
+            }
+
+            .formLabel:nth-child(1),
+            .formLabel:nth-child(2) {
+                @include tablet() {
+                    flex: 1;
+                }
+
+                @include mobile() {
+                    flex: none;
+                }
+            }
+
+            input,
+            #events__calendar-select {
+                width: 100%;
+                padding-block: 40px 20px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid $white;
+                cursor: pointer;
+
+                &,
+                &::placeholder {
+                    color: #FFF;
+                    font-family: 'Apoc Normal';
+                    font-size: 24px;
+                    font-style: italic;
+                    font-weight: 400;
+
+                    @include tablet() {
+                        font-size: 20px;
+                    }
+
+                    @include mobile() {
+                        font-size: 16px;
+                    }
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            #events__calendar-select {
+                -webkit-appearance: none;
+
+                option {
+                    background-color: $darkBlue;
+                }
+            }
+
+
+            #events__calendar-select,
+            label {
+                position: relative;
+
+                img {
+                    position: absolute;
+                    bottom: 30px;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    &__carusel {
+        margin-top: 120px;
+
+        &__card {
+            @include eventsCarusel;
+        }
+
+        &-btns {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+            margin-top: 80px;
+
+            .carusel__btn-left, .carusel__btn-right {
+                width: 69px;
+                height: 69px;
+                background-color: $orange;
+                border-radius: 50%;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

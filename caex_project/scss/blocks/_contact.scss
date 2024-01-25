@@ -1,0 +1,190 @@
+.contact {
+    background-color: $white;
+    padding-block: 200px;
+
+    @include tablet() {
+        padding-block: 100px;
+    }
+    @include mobile() {
+        padding-block: 50px;
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 155px;
+
+        // Responsive media min-width 0px and max-width 1440px
+        @include media(0px, 1440px) {
+            gap: 120px;
+        }
+        @include tablet() {
+            gap: 60px;
+        }
+        @include mobile() {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .feedback {
+        flex: 1.5;
+
+        // Responsive media min-width 0px and max-width 1440px
+        @include media(0px, 1440px) {
+            flex: 1.2;
+        }
+
+        // Feedback title
+        h2 {
+            color: $darkBlue;
+            font-size: 64px;
+            font-weight: 400;
+
+            span {
+                font-family: 'Apoc Normal';
+                font-style: italic;
+            }
+
+            // Responsive media min-width 0px and max-width 1440px
+            @include media(0px, 1440px) {
+                font-size: 56px;
+            }
+
+            // Responsive media min-width 768px and max-width 1024px
+            @include tablet() {
+                font-size: 30px;
+            }
+
+            // Responsive media min-width 0px and max-width 7670px
+            @include mobile() {
+                font-size: 22px;
+            }
+        }
+
+        // Feedback description
+        p {
+            color: $darkBlue;
+            font-size: 24px;
+            font-weight: 400;
+
+            margin: 20px 0 80px;
+
+            // Responsive media min-width 0px and max-width 1440px
+            @include media(0px, 1325px) {
+                margin-bottom: 50px;
+            }
+
+            // Responsive media min-width 768px and max-width 1024px
+            @include tablet() {
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            // Responsive media min-width 0px and max-width 767px
+            @include mobile() {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
+        }
+
+        // Feedback form
+        &__form {
+
+            @include formInput;
+
+            #input-phone-number {
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+            }
+
+            &-btn {
+                @include primaryBtn;
+            }
+        }
+    }
+
+    &__content {
+        flex: 1;
+
+        h2 {
+            color: $darkBlue;
+            font-family: 'Apoc Normal';
+            font-size: 64px;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 129px;
+
+            // Responsive media min-width 0px and max-width 1440px
+            @include media(0px, 1440px) {
+                font-size: 56px;
+            }
+
+            @include tablet() {
+                font-size: 32px;
+                margin-bottom: 48px;
+
+            }
+            @include media(0px, 902px) {
+                margin-bottom: 65px;
+            }
+
+            @include mobile() {
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &-info {
+            border-top: 1px solid $darkBlue;
+            padding: 40px 0 20px;
+
+            // Responsive media min-width 0px and max-width 1440px
+            @include media(0px, 1440px) {
+                padding: 25px 0 15px;
+            }
+            @include tablet() {
+                padding: 15px 0 10px;
+            }
+            @include mobile() {
+                padding: 10px 0 5px;
+            }
+
+            span {
+                color: $orange;
+                font-size: 20px;
+                font-weight: 700;
+
+                @include tablet() {
+                    font-size: 16px;
+                }
+
+                @include mobile() {
+                    font-size: 14px;
+                }
+            }
+
+            p {
+                color: $darkBlue;
+                font-size: 32px;
+                font-weight: 400;
+                margin-top: 20px;
+                
+                // Responsive media min-width 0px and max-width 1440px
+                @include media(0px, 1440px) {
+                    font-size: 24px;
+                }
+                
+                @include tablet() {
+                    font-size: 18px;
+                }
+                
+                @include mobile() {
+                    max-width: 350px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

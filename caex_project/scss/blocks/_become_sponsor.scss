@@ -1,0 +1,71 @@
+.sponsor {
+    padding-block: 200px;
+    background-color: $white;
+
+    @include media(0px, 1440px) {
+        padding-block: 150px;
+    }
+
+    @include tablet() {
+        padding-block: 100px;
+    }
+
+    @include mobile() {
+        padding-block: 70px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            max-width: 600px;
+            color: $darkBlue;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 123px;
+
+            @include media(0px, 1440px) {
+                font-size: 32px;
+                margin-bottom: 110px;
+            }
+
+            @include tablet() {
+                font-size: 28px;
+                margin-bottom: 80px;
+            }
+
+            @include mobile() {
+                font-size: 20px;
+                margin-bottom: 50px;
+            }
+        }
+
+        &__form {
+
+            &>div {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 60px;
+                @include formInput;
+                
+                label:nth-child(3), label:nth-child(4) {
+                    border-bottom: 1px solid $darkBlue;
+                }
+
+                @include mobile() {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+
+                    label:nth-child(3){
+                        border-bottom: 1px solid transparent;
+                    }
+                }
+            }
+
+            .ticket__form-btn {
+                @include primaryBtn;
+            }
+        }
+    }
+}

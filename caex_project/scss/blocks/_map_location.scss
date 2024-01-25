@@ -1,0 +1,41 @@
+.map__location {
+    background-color: $white;
+    margin-top: -30px;
+
+    & .container {
+        max-width: 1920px;
+        padding: 30px;
+
+        @include media(0px, 1440px) {
+            padding: 20px;
+        }
+        @include tablet() {
+            padding: 15px;
+        }
+        @include mobile() {
+            padding: 5px;
+        }
+    }
+    
+    iframe {
+        border-radius: 40px;
+        width: 100%;
+        height: 1020px;
+        border: 1px solid $darkBlue;
+
+        @include media(0px, 1440px) {
+            height: 850px;
+            border-radius: 30px;
+        }
+
+        @include tablet() {
+            height: 700px;
+            border-radius: 20px;
+        }
+
+        @include mobile() {
+            height: 500px;
+            border-radius: 10px;
+        }
+    }
+}
